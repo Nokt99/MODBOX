@@ -4,40 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MODBOX</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/sign-in.css">
 </head>
 <body>
-
-<div id="preloader">
-    <div class="spinner"></div>
-</div>
-
-<div id="main-content" class="hidden">
-
-    <header class="hero">
-        <h1 class="modbox-title">MODBOX</h1>
-        <h2 class="tagline">Build. Deploy. Host Anything.</h2>
-        <div class="hero-buttons">
-            <button class="primary-btn">GET STARTED</button>
-            <button class="secondary-btn">TERMS OF SERVICE</button>
+    <div id="landing-page">
+        <h1 id="modbox-title">MODBOX</h1>
+        <h2 id="tagline">Build, Deploy, Host Anything</h2>
+        <div id="landing-buttons">
+            <button id="get-started-btn">GET STARTED</button>
+            <button id="tos-btn">TERMS OF SERVICE</button>
         </div>
-    </header>
+    </div>
 
-    <section class="terminal-card">
-        <pre class="terminal-output">
-&gt; npm run deploy
-✔ Building...
-✔ Deploying...
-✔ Live at modbox.dev
-        </pre>
-    </section>
+    <div id="sign-up-container" class="hidden">
+        <div class="sign-in-card">
+            <h1 class="title">Welcome to MODBOX</h1>
+            <h2 class="subtitle">Sign in to continue building, deploying, and hosting anything.</h2>
+            <form class="sign-in-form" id="sign-in-form">
+                <input type="text" id="username" placeholder="Enter your display name" required>
+                <input type="email" id="email" placeholder="Enter your email (Microsoft, Google, Apple, Mailfence…)" required>
+                <input type="password" id="password" placeholder="Enter your password" required>
+                <div class="dob-container">
+                    <input type="number" id="dob-year" placeholder="Year" min="1950" max="2026" required>
+                    <input type="number" id="dob-month" placeholder="Month" min="1" max="12" required>
+                    <input type="number" id="dob-date" placeholder="Date" min="1" max="25" required>
+                </div>
+                <button type="submit" id="next-btn" disabled>Next</button>
+            </form>
+        </div>
+    </div>
 
-</div>
-
-<script src="scripts/main.js"></script>
-
+    <script src="scripts/main.js"></script>
+    <script src="scripts/sign-in.js"></script>
 </body>
 </html>
